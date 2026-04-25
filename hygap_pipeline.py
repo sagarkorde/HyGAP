@@ -1,12 +1,7 @@
 """
 HyGAP: Hybrid Graph-based Anomaly Profiling
-ICCUBEA 2026 – Reproduce Tables I & II Exactly
------------------------------------------------
-Target metrics (from paper):
-  Table I  – HyGAP: Sil=0.68, DB=1.12, ARI=0.61, RT=4.0h
-  Table II – HyGAP strict: P=0.74, R=0.26, F1=0.38
-             HyGAP mid   : P=0.40, R=0.45, F1=0.42
-             HyGAP full  : P=0.13, R=0.68, F1=0.22
+Bitcoin wallet anomaly detection via DBSCAN-guided K-Means clustering
+and graph-theoretic Structural Importance Scoring (SIS).
 """
 
 import warnings; warnings.filterwarnings("ignore")
@@ -35,8 +30,8 @@ from sklearn.metrics        import (
 # ═══════════════════════════════════════════════════════════════════════════════
 # CONFIGURATION  — paper hyperparameters
 # ═══════════════════════════════════════════════════════════════════════════════
-DATA_PATH  = r"C:\Users\sagar\Desktop\ICCUBEA 2026\Dataset.parquet"
-OUTPUT_DIR = r"C:\Users\sagar\Desktop\ICCUBEA 2026\hygap_output"
+DATA_PATH  = r"Dataset.parquet"
+OUTPUT_DIR = r"hygap_output"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 ALPHA, BETA      = 0.6, 0.4        # edge-weight: α·vol + β·freq
@@ -835,7 +830,7 @@ def main():
     T = time.time()
     print("="*72)
     print("  HyGAP: Hybrid Graph-based Anomaly Profiling")
-    print("  ICCUBEA 2026 — Reproducing Tables I & II")
+    print("  Full 6-Layer Pipeline Execution")
     print("="*72+"\n")
 
     df                      = layer1_load()

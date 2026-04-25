@@ -1,0 +1,13 @@
+HyGAP Pipeline – Metrics vs Paper Targets
+=======================================================
+
+  Metric                          Actual     Paper
+  ------------------------------------------------
+  Silhouette (HyGAP)              0.3185      0.68
+  Davies-Bouldin                  1.2186      1.12
+  ARI                             0.0069      0.61
+  Noise rate                        3.8%      4.8%
+  GT wallets                        8432      8432
+  F1 strict SIS                   0.3734      0.38
+  F1 mid SIS                      0.4238      0.42
+  F1 full noise                   0.2182      0.22

@@ -1,0 +1,17 @@
+# Large data files
+Dataset.parquet
+hygap_output/wallet_risk_scores.csv
+
+# Build artefacts
+*.aux
+*.log
+*.pdf
+*.zip
+
+# System files
+desktop.ini
+.claude/
+
+# Raw corpus
+Conference Paper V1.docx
+iccubea_2026_overleaf_Reviews.pdf
